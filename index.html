@@ -75,6 +75,45 @@
                     Man nennt die Anwendung dieser Transformationsmatrix zum Wechsel der Koordinatensysteme auch <em>Koordinatentransformation</em>.
                 </section>
             </section>
+
+            <section>
+                <h3>TODO: F. 5-23</h3>
+            </section>
+
+            <section>
+                <h4>Transformationsmatrix zum Wechsel Rechtssystem $\leftrightarrow$ Linkssystem</h4>
+
+                $$M_{L \leftarrow R} = M_{R \leftarrow L} = \begin{pmatrix}
+                1 &amp; 0 &amp;  0 &amp; 0 \\
+                0 &amp; 1 &amp;  0 &amp; 0 \\
+                0 &amp; 0 &amp; -1 &amp; 0 \\
+                0 &amp; 0 &amp;  0 &amp; 1
+                \end{pmatrix}$$
+            </section>
+
+            <section>
+                <h3>Korrespondierende Transformationen</h3>
+
+                <section>
+                    Fragestellung: F&uuml;hren wir eine Transformation $Q_{K_1}$ im Koordinatensystem $K_1$ aus, welches ist dann die
+                    korrespondierende Transformation $Q_{K_2}$ im korrespondierenden Koordinatensystem $K_2$?
+                </section>
+
+                <section>
+                    Gegeben sei die Matrix $M_{K_2 \leftarrow K_1}$ zur Umrechnung von $K_1$ nach $K_2$, so dass f&uuml;r Punktkoordinaten gilt:
+                    $$P_{K_2} = M_{K_2 \leftarrow K_1} \cdot P_{K_1}$$
+                </section>
+
+                <section>
+                    F&uuml;hren wir $Q_{K_1}$ in $K_1$ aus, folgt f&uuml;r $Q_{K_2}$ in $K_2$:
+                    $$\begin{aligned}
+                    Q_{K_2} \cdot P_{K_2} &amp; = M_{K_2 \leftarrow K_1} \cdot (Q_{K_1} \cdot P_{K_1}) \\
+                    Q_{K_2} \cdot (M_{K_2 \leftarrow K_1} \cdot P_{K_1}) &amp; = M_{K_2 \leftarrow K_1} \cdot Q_{K_1} \cdot P_{K_1} \\
+                    Q_{K_2} \cdot M_{K_2 \leftarrow K_1} &amp; = M_{K_2 \leftarrow K_1} \cdot Q_{K_1} \\
+                    Q_{K_2} &amp; = M_{K_2 \leftarrow K_1} \cdot Q_{K_1} \cdot M_{K_2 \leftarrow K_1}^{-1}
+                    \end{aligned}$$
+                </section>
+            </section>
         </div>
     </div>
 
